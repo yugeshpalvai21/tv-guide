@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def search
-    @channels = Channel.where('LOWER(name) LIKE ?', "%#{params[:search_term].to_s.downcase}%")
-    @shows = Show.where('LOWER(name) LIKE ?', "%#{params[:search_term].to_s.downcase}%")
+    @channels = Channel.search(params[:search_term])
+    @shows = Show.search(params[:search_term])
   end
 end
