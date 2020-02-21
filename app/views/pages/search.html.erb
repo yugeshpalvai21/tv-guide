@@ -1,0 +1,9 @@
+<h1 align="center">Search Results</h1>
+<h3>Channels Found - <%= @channels.count %></h3>
+<% @channels.each do |channel| %>
+  <p><%= channel.name %></p>
+<% end %> <hr>
+<h3>Shows Found - <%= @shows.count %></h3>
+<% @shows.each do |show| %>
+  <p><%= link_to show.name, show %></p>
+<% end %>
