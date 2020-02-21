@@ -1,0 +1,8 @@
+<h1 align="center">List Of Shows</h1>
+
+<% @shows.each do |show| %>
+  <h2><%= link_to show.name, show %></h2>
+  <p>Channel: <%= show.channel.name %></p>
+  <p>Show Timing: <%= show.timing %></p>
+  <hr>
+<% end %>
